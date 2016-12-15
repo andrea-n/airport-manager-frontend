@@ -1,0 +1,12 @@
+i.icon { width: 25px; height: 25px; display: inline-block; *display: inline; zoom: 1; vertical-align: top; position: relative; background: url('../img/sprite.png') 0 0 no-repeat; }
+
+i.icon.icon-tel { background-position: 0 0; }
+
+i.icon.icon-cloud { width: 50px; height: 50px; background-position: 0 -25px; }
+i.icon.icon-list { width: 50px; height: 50px; background-position: -50px -25px; }
+i.icon.icon-display { width: 50px; height: 50px; background-position: -100px -25px; }
+i.icon.icon-finger { width: 50px; height: 50px; background-position: -150px -25px; }
+
+/* SVG icons */
+.icon { width: 20px; height: 20px; display: inline-block; *display: inline; zoom: 1; vertical-align: top; position: relative; fill: currentColor; }
+.icon-porta { width: 65px; }

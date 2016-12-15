@@ -1,0 +1,24 @@
+# frontend stack metadata, cache, logs
+/node_modules
+/bower_components
+.sass-cache/
+/npm-debug.log
+
+# exclude downloaded and compiled files
+/static/js/*
+!/static/js/partials
+/static/css/*
+!/static/css/.dummy
+/static/scss/lib/*
+!/static/scss/lib/.dummy
+
+# composer libraries
+/vendor
+/composer.lock
+
+# templator
+/templator.php
+/website
+
+# ide configuration
+/nbproject

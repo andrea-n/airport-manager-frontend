@@ -1,0 +1,23 @@
+{
+	"name": "portabucket/porta_static",
+	"description": "Private composer package of our frontend starter kit",
+	"authors": [
+		{
+			"name": "Martin Kuric",
+			"email": "martin.kuric@portadesign.cz"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"rm composer.json",
+			"rm composer.lock",
+			"rm README.md",
+			"rm -rf vendor",
+			"pnpm install",
+			"gulp prod"
+		]
+	}
+}

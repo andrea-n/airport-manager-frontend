@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 8 ]><html lang="cs" class="ie7"> <![endif]-->
+<!--[if lt IE 9 ]><html lang="cs" class="ie8"> <![endif]-->
+<!--[if lt IE 10 ]><html lang="cs" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="cs"> <!--<![endif]-->
+	<head>
+		<!-- charset and title -->
+		<meta charset="utf-8">
+		<title>Airport Manager</title>
+
+		<!-- meta tags -->
+		<meta name="keywords" content="">
+		<meta name="robots" content="all,follow">
+		<meta name="author" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap4.min.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap4.min.js"></script>
+		<script type="text/javascript" src="static/js/scripts.js"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<nav class="main-nav" role="navigation">
+							<ul>
+								<li><a href="/">Flights</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="card card-block">
+							<table id="flights" class="datatable table table-striped table-responsive">
+								<thead>
+									<tr>
+										<th>
+											Flight id
+										</th>
+										<th>
+											Source port
+										</th>
+										<th>
+											Destination port
+										</th>
+										<th>
+											Departure
+										</th>
+										<th>
+											Arrival
+										</th>
+										<th>
+											Airplane
+										</th>
+										<th>
+											Stewards
+										</th>
+										<th>
+											Passengers
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											2
+										</td>
+										<td>
+											Brno
+										</td>
+										<td>
+											Paris
+										</td>
+										<td>
+											24.1.2017 16:00
+										</td>
+										<td>
+											25.1.2017 18:00
+										</td>
+										<td>
+											Airplane1
+										</td>
+										<td>
+											Jan Novák
+										</td>
+										<td>
+											50
+										</td>
+									</tr>
+									<tr>
+										<td>
+											10
+										</td>
+										<td>
+											Paris
+										</td>
+										<td>
+											Brno
+										</td>
+										<td>
+											27.1.2017 16:00
+										</td>
+										<td>
+											27.1.2017 18:00
+										</td>
+										<td>
+											Airplane3
+										</td>
+										<td>
+											John Doe
+										</td>
+										<td>
+											52
+										</td>
+									</tr>
+									<tr>
+										<td>
+											5
+										</td>
+										<td>
+											Prague
+										</td>
+										<td>
+											New York
+										</td>
+										<td>
+											14.2.2017 17:00
+										</td>
+										<td>
+											14.2.2017 23:00
+										</td>
+										<td>
+											Airplane2
+										</td>
+										<td>
+											Jan Novák
+										</td>
+										<td>
+											40
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right text-small">
+						<p>Airport Manager / PV165</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JS -->
+	</body>
+</html>

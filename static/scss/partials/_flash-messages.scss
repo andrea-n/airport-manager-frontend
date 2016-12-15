@@ -1,0 +1,16 @@
+.flash-message { font: normal 16px/24px Arial,sans-serif; background: #fc796b; color: #fff; width: 100%; padding: 15px 50px 15px 20px; margin: 0 0 20px 0; display: inline-block; *display: inline; *zoom: 1; vertical-align: top; position: relative; border-radius: 0 0 4px 4px; -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; }
+.flash-message .close { font: normal 36px/24px Arial,sans-serif; width: 20px; height: 20px; padding: 0; line-height: 18px; text-align: center; color: #c96055; border: none; display: block; position: absolute; right: 17px; top: 16px; background: none; }
+.flash-message .close:hover { color: #fff !important; }
+
+.flash-message.alert-danger { background: #d14233; color: #fff; }
+.flash-message.alert-danger .close { color: #912519; }
+
+.flash-message.alert-success { background: #19b698; color: #fff; }
+.flash-message.alert-success .close { color: #13927a; }
+
+.modal-content .flash-message { margin: 0 0 20px 0; }
+
+.error, form.std label.error { font-size: 16px; font-weight: 400; color: #ff0030; display: block; margin-top: 5px; }
+
+#flash-messages { position: fixed; top: 0; left: 0; width: 100%; z-index: 9999; }
+#flash-messages .flash-message { margin: 0 auto; width: 1180px; display: block; }

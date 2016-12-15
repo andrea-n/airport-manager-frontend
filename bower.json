@@ -1,0 +1,19 @@
+{
+	"name": "porta_js_libs",
+	"authors": [
+		"PORTA DESIGN s.r.o. <info@portadesign.cz>"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components"
+	],
+	"dependencies": {
+		"jquery-validation": "1.15.1"
+	},
+	"overrides": {
+		"jquery-validation": {
+			"main": ["dist/jquery.validate.js", "dist/additional-methods.js"]
+		}
+	}
+}
