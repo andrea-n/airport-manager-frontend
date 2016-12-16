@@ -11,6 +11,15 @@
   display: block;
 }
 
+form .error {
+  color: #fc0000;
+  font-weight: 300;
+}
+
+form label {
+  font-weight: 400;
+}
+
 .footer {
   background: #1a2638;
   padding: 1em 0;

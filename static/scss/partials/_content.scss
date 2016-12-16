@@ -3,6 +3,9 @@
 .hidden { display: none; }
 .hidden.active { display: block; }
 
+form .error { color: $red; font-weight: 300; }
+form label { font-weight: 400; }
+
 
 @media screen and (max-width: $md) {
 	

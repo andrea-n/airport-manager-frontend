@@ -24,6 +24,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap4.min.js"></script>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="static/js/scripts.js"></script>
 	</head>
 
@@ -69,7 +70,7 @@
 											Airplane
 										</th>
 										<th>
-											Stewards
+											Steward
 										</th>
 										<th>
 											Passengers
@@ -99,11 +100,11 @@
 										<td data-name="arrival">
 											25.1.2017 18:00
 										</td>
-										<td data-name="airplane">
+										<td data-name="airplane" data-type="select" data-option="1">
 											Airplane1
 										</td>
-										<td data-name="stewards">
-											Jan Novák, John Doe
+										<td data-name="steward" data-type="select" data-option="1">
+											Jan Novák
 										</td>
 										<td data-name="passengers">
 											50
@@ -131,10 +132,10 @@
 										<td data-name="arrival">
 											27.1.2017 18:00
 										</td>
-										<td data-name="airplane">
+										<td data-name="airplane" data-type="select" data-type="select" data-option="3">
 											Airplane3
 										</td>
-										<td data-name="stewards">
+										<td data-name="steward" data-type="select" data-option="1">
 											John Doe
 										</td>
 										<td data-name="passengers">
@@ -163,10 +164,10 @@
 										<td data-name="arrival">
 											14.2.2017 23:00
 										</td>
-										<td data-name="airplane">
+										<td data-name="airplane" data-type="select" data-option="2">
 											Airplane2
 										</td>
-										<td data-name="stewards">
+										<td data-name="steward" data-type="select" data-option="1">
 											Jan Novák
 										</td>
 										<td data-name="passengers">
@@ -189,20 +190,20 @@
 						<div id="update" class="hidden">
 							<div class="card card-block">
 								<h4>Update flight</h4>
-								<form>
+								<form class="form" id="update-form" method="post" action="">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="">Source port</label>
-												<input type="text" class="form-control" id="source">
+												<input type="text" class="form-control" id="source" name="source" required>
 											</div>
 											<div class="form-group">
 												<label for="">Departure</label>
-												<input type="text" class="form-control" id="departure">
+												<input type="text" class="form-control" id="departure" name="departure" required>
 											</div>
 											<div class="form-group">
 												<label for="">Airplane</label>
-												<select class="custom-select form-control" id="airplane">
+												<select class="custom-select form-control" id="airplane" name="airplane">
 													<option value="1">Airplane1</option>
 													<option value="2">Airplane2</option>
 													<option value="3">Airplane3</option>
@@ -212,15 +213,15 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="">Destination port</label>
-												<input type="text" class="form-control" id="destination">
+												<input type="text" class="form-control" id="destination" name="destination" required>
 											</div>
 											<div class="form-group">
 												<label for="">Arrival</label>
-												<input type="text" class="form-control" id="arrival">
+												<input type="text" class="form-control" id="arrival" name="arrival" required>
 											</div>
 											<div class="form-group">
-												<label for="">Stewards</label>
-												<select multiple class="form-control" id="stewards">
+												<label for="">Steward</label>
+												<select class="custom-select form-control" id="steward" name="steward">
 													<option value="1">Jan Novák</option>
 													<option value="2">John Doe</option>
 												</select>
@@ -231,13 +232,13 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="">Passengers</label>
-												<input type="number" class="form-control" id="passengers">
+												<input type="number" class="form-control" id="passengers" name="passengers">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="">Id</label>
-												<input type="text" disabled class="form-control" id="id">
+												<input type="text" disabled class="form-control" id="id" name="id">
 											</div>
 										</div>
 									</div>
@@ -254,20 +255,20 @@
 					<div class="col-md-6 pull-md-6">
 						<div class="card card-block">
 							<h4>Add flight</h4>
-							<form>
+							<form class="form" id="add-form" method="post" action="">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="">Source port</label>
-											<input type="text" class="form-control" id="source">
+											<input type="text" class="form-control" id="source" name="source" required>
 										</div>
 										<div class="form-group">
 											<label for="">Departure</label>
-											<input type="text" class="form-control" id="departure">
+											<input type="text" class="form-control" id="departure" name="departure" required>
 										</div>
 										<div class="form-group">
 											<label for="">Airplane</label>
-											<select class="custom-select form-control">
+											<select class="custom-select form-control" id="airplane" name="airplane">
 												<option value="1">Airplane1</option>
 												<option value="2">Airplane2</option>
 												<option value="3">Airplane3</option>
@@ -277,15 +278,15 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="">Destination port</label>
-											<input type="text" class="form-control" id="destination">
+											<input type="text" class="form-control" id="destination" name="destination" required>
 										</div>
 										<div class="form-group">
 											<label for="">Arrival</label>
-											<input type="text" class="form-control" id="arrival">
+											<input type="text" class="form-control" id="arrival" name="arrival" required>
 										</div>
 										<div class="form-group">
-											<label for="">Stewards</label>
-											<select multiple class="form-control" id="exampleSelect2">
+											<label for="">Steward</label>
+											<select class="custom-select form-control" id="steward" name="steward">
 												<option value="1">Jan Novák</option>
 												<option value="2">John Doe</option>
 											</select>
@@ -296,7 +297,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="">Passengers</label>
-											<input type="number" class="form-control" id="departure">
+											<input type="number" class="form-control" id="departure" name="passengers">
 										</div>
 									</div>
 								</div>
