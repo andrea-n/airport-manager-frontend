@@ -9,11 +9,5 @@
 		"bower_components"
 	],
 	"dependencies": {
-		"jquery-validation": "1.15.1"
-	},
-	"overrides": {
-		"jquery-validation": {
-			"main": ["dist/jquery.validate.js", "dist/additional-methods.js"]
-		}
 	}
 }
