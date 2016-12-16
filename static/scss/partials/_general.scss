@@ -24,50 +24,7 @@ label { font-weight: bold; }
 input, select, button { vertical-align: top; }
 a, a:hover, a:active, a:focus { outline: 0; }
 
-/* Various */
-
-img { max-width: 100%; height: auto; }
-
-.last { margin-bottom: 0 !important; }
-
-.sh-content { display: none; }
-
-
-/* Alignment */
-
-.v-top { vertical-align: top; }
-.v-middle { vertical-align: middle; }
-.v-bottom { vertical-align: bottom; }
-
-/* Vertical align */
-
-.va-wrap { display: table; width: 100%; height: 100%; }
-.va-m { display: table-cell; vertical-align: middle; height: 100%; }
-.va-t { display: table-cell; vertical-align: top; height: 100%; }
-.va-b { display: table-cell; vertical-align: bottom; height: 100%; }
-
-.col-set {  display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-wrap: wrap; width: 100%; }
-
-.col2-set .col { width: 49%; margin-bottom: 1em; }
-.col3-set .col { width: 32%; margin-bottom: 1em; }
-.col4-set .col { width: 24%; padding: 0 0 0 1em; }
-
-.ib { font-family: Arial,sans-serif; letter-spacing: -0.31em; *letter-spacing: normal; *word-spacing: -0.43em; }
-.ib > * { font-family: Arial,sans-serif; display: inline-block; *display: inline; zoom: 1; vertical-align: top; letter-spacing: normal; word-spacing: normal; }
-
-
 /* Layout */
-
-@for $i from 0 through 5 {
-  .m-t-#{$i} { margin-top: #{$i}em; }
-  .m-b-#{$i} { margin-bottom: #{$i}em; }
-  .m-l-#{$i} { margin-left: #{$i}em; }
-  .m-r-#{$i} { margin-right: #{$i}em; }
-  .p-t-#{$i} { padding-top: #{$i}em; }
-  .p-b-#{$i} { padding-bottom: #{$i}em; }
-  .p-l-#{$i} { padding-left: #{$i}em; }
-  .p-r-#{$i} { padding-right: #{$i}em; }
-}
 
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }

@@ -5,10 +5,6 @@
 /npm-debug.log
 
 # exclude downloaded and compiled files
-/static/js/*
-!/static/js/partials
-/static/css/*
-!/static/css/.dummy
 /static/scss/lib/*
 !/static/scss/lib/.dummy
 
