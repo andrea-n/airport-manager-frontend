@@ -1,5 +1,8 @@
 .content { padding: 3em 0; }
 
+.hidden { display: none; }
+.hidden.active { display: block; }
+
 
 @media screen and (max-width: $md) {
 	
